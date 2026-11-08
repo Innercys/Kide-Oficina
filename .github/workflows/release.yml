@@ -10,6 +10,7 @@ env:
 
 jobs:
   build:
+    permissions: write-all
     name: Build Release Binaries
     runs-on: ubuntu-latest
     strategy:
@@ -94,6 +95,7 @@ jobs:
           asset_name: ${{ matrix.binary_name }}.zip
           asset_content_type: application/zip
   version_file:
+    permissions: write-all
     name: Generate version.json file
     runs-on: ubuntu-latest
     steps:
